@@ -1,15 +1,25 @@
 {
     "name": "totem.module.code-block",
-    "version": "0.1.0",
-    "description": "",
+    "version": "0.2.0",
+    "description": "Twig partial for including Prism.js compatible markup.",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/toolbarthomas/totem.module.code-block.git"
     },
     "keywords": [
         "totem",
         "totem-module",
         "totem.module.code-block"
     ],
+    "author": "Thomas van der Velde <contact@toolbarthomas.net>",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/toolbarthomas/totem.module.code-block/issues"
+    },
+    "homepage": "https://github.com/toolbarthomas/totem.module.code-block#readme",
     "dependencies": {
         "prism-themes": "^1.0.0",
         "prismjs": "^1.8.4"
