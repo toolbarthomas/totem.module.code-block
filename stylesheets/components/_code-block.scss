@@ -1,0 +1,17 @@
+.code-block {
+    position: relative;
+    padding: box-model('gutter', 'base');
+    background-color: color('body', 'dark');
+    border-radius: box-model('border-radius', 'medium');
+
+    margin-top: box-model('spacing', 'base');
+    margin-bottom: box-model('spacing', 'base');
+
+    &:first-child {
+        margin-top: 0;
+    }
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}

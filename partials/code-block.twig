@@ -1,0 +1,18 @@
+{% if block('code') is defined %}
+    <div class="code-block">
+        {% if show_result %}
+        <div class="code-block-preview">
+            {{ block('code') }}
+        </div>
+        {% endif %}
+        <div class="code-block-markup">
+            <pre>
+                <code class="{{ language is not empty ? language : 'language-markup'}}">
+                    <script type="prism-html-markup">
+                        {{ block('code') }}
+                    </script>
+                </code>
+            </pre>
+            </div>
+    </div>
+{% endif %}
