@@ -8,7 +8,7 @@
     You should define your code within `totem.module.code-block/partials`.
 #}
 
-{% extends "totem::src/resources/templates/module/module.twig" %}
+{% extends "totem_submodules::totem.template.module/module.twig" %}
 
 {% block module %}
     {% embed "totem_submodules::totem.module.code-block/partials/code-block.twig" with {
