@@ -13,21 +13,39 @@
 {% block module %}
     {% embed "totem_submodules::totem.module.code-block/partials/code-block.twig" with {
         language: 'language-twig'
-    %}{% block code %}
-
-        {&#37; embed "totem_submodules::totem.module.code-block/partials/code-block.twig" &#37;}
-            {&#37; block code &#37;}
-                <h1>Example</h1>
-                <p>Aliqua ad cillum ea exercitation aliquip sunt officia.</p>
-            {&#37;- endblock &#37;}
-        {&#37; endembed &#37;}
-    {% endblock -%}{% endembed %}
+    } %}
+        {% block code %}
+            {% verbatim %}
+                {% embed "totem_submodules::totem.module.code-block/partials/code-block.twig" %}
+                    {% block code %}
+                        <h1>Example</h1>
+                        <p>Aliqua ad cillum ea exercitation aliquip sunt officia.</p>
+                    {% endblock %}
+                {% endembed %}
+            {% endverbatim %}
+        {% endblock %}
+    {% endembed %}
 {% endblock %}
 
 {% block head %}
-    <link href="stylesheets/totem.module.code-block.css" rel="stylesheet"/>
+    <link href="stylesheets/totem.module.code-block.css" rel="stylesheet" />
+
+    <style>{% include "totem_submodules::totem.module.code-block/node_modules/prism-themes/themes/prism-atom-dark.css" ignore missing %}</style>
 {% endblock %}
 
 {% block foot %}
     <script src="javascripts/totem.module.code-block.js"></script>
+
+    <script>
+        {% include "totem_submodules::totem.module.code-block/node_modules/prismjs/prism.js" ignore missing %}
+        {% include "totem_submodules::totem.module.code-block/node_modules/prismjs/plugins/normalize-whitespace/prism-normalize-whitespace.js" ignore missing %}
+
+        Prism.plugins.NormalizeWhitespace.setDefaults({
+            'remove-trailing': true,
+            'remove-indent': true,
+            'left-trim': true,
+            'right-trim': true,
+        });
+    </script>
+
 {% endblock %}
