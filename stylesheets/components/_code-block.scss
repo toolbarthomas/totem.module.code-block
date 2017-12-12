@@ -1,11 +1,11 @@
 .code-block {
     position: relative;
-    padding: box-model('gutter', 'base');
+    padding: box-model('padding', 'base');
     background-color: color('body', 'dark');
     border-radius: box-model('border-radius', 'medium');
 
-    margin-top: box-model('spacing', 'base');
-    margin-bottom: box-model('spacing', 'base');
+    margin-top: box-model('margin', 'base');
+    margin-bottom: box-model('margin', 'base');
 
     &:first-child {
         margin-top: 0;
