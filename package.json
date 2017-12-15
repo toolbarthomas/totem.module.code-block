@@ -1,6 +1,6 @@
 {
     "name": "totem.module.code-block",
-    "version": "0.7.0",
+    "version": "0.8.0",
     "description": "Twig partial for including Prism.js compatible markup.",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1"
@@ -23,6 +23,6 @@
     "dependencies": {
         "prism-themes": "^1.0.0",
         "prismjs": "^1.8.4",
-        "totem.template.module": "^0.1.0"
+        "totem.template.module": "^0.7.0"
     }
 }
